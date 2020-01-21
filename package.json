@@ -1,6 +1,6 @@
 {
   "name": "comment-parser",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A test of comment markup",
   "main": "",
   "scripts": {
