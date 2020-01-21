@@ -1,0 +1,35 @@
+<%
+    const packageJson = require('../package.json');
+    const title = (packageJson.htmlMeta && packageJson.htmlMeta.title) || packageJson.name;
+    const description = (packageJson.htmlMeta && packageJson.htmlMeta.description) || packageJson.description;
+    const type = (packageJson.htmlMeta && packageJson.htmlMeta.type) || 'website';
+    const siteName = (packageJson.htmlMeta && packageJson.htmlMeta.siteName) || null;
+ %>
+<html>
+    <head>
+        <title><%= title %></title>
+        <meta property="og:type" content="<%= type %>" />
+        <meta property="og:title" content="<%= title %>" />
+        <meta property="og:description" content="<%= description %>" />
+        <% if(siteName) { %>
+        <meta property="og:site_name" content="<%= siteName %>" />
+        <% } %>
+    </head>
+    <body>
+        <textarea id="comment" cols="60" rows="10">
+Have some *bold* text!
+Have some _italic_ text!
+Have some ~strikethrough~ text!
+Have some `code` text!
+
+Have some _*bold italic*_ text!
+    
+Have some +underline+ text!
+    
+*This isn't bold because
+it has a line break*
+
+`Have some code with _*formatting escaped*_`</textarea><br>
+        <div id="output"></div>
+    </body>
+</html>

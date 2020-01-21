@@ -1,0 +1,40 @@
+#comment {
+    resize: none;
+}
+
+#output {
+    padding: 10px;
+    border: 1px solid #666;
+    display: inline-block;
+    min-width: 200px;
+    min-height: 200px;
+    border-radius: 10px;
+    margin: 10px;
+    font-family: Lato;
+    font-size: 14px;
+    line-height: 1.5em;
+    .cm {
+        padding: 2px;
+        vertical-align: baseline;
+    }
+    .cm-bold {
+        font-weight: bold;
+    }
+    .cm-italic {
+        font-style: italic;
+    }
+    .cm-underline {
+        text-decoration: underline;
+    }
+    .cm-strike {
+        text-decoration: line-through;
+    }
+    .cm-code {
+        color: #e01e5a;
+        background-color: #f6f6f6;
+        border: 1px solid #dadada;
+        padding: 1px 2px !important;
+        font-family: 'Courier New', monospace;
+        border-radius: 3px;
+    }
+}
