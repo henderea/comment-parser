@@ -1,4 +1,5 @@
 require('./index.scss');
+require('./screenshot.png');
 const $ = require('jquery');
 // require('jquery-ui');
 // const _ = require('lodash');
