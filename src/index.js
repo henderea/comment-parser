@@ -53,8 +53,8 @@ const mapChars = (c) => _join(_map(`${c}`.split(''), mapChar), '');
 
 const parse = str => {
     str = str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-    str = str.replace(/([^`~*_\s])([`~*_]+)([^`~*_\s])/g, (m, b, c, a) => `${b}${mapChars(c)}${a}`)
-    str = str.replace(/[`]([^`\s](?:[^\n`]*[^`\s])?)[`]/g, (m, c) => '`' + c.replace(/([~*_]+)/g, (m, ch) => mapChars(ch)) + '`');
+    str = str.replace(/([^`~*_+\s])([`~*_+]+)([^`~*_+\s])/g, (m, b, c, a) => `${b}${mapChars(c)}${a}`)
+    str = str.replace(/[`]([^`\s](?:[^\n`]*[^`\s])?)[`]/g, (m, c) => '`' + c.replace(/([~*_+]+)/g, (m, ch) => mapChars(ch)) + '`');
     _each(rules, rule => {
         str = rule.apply(str);
     });
