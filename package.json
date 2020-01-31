@@ -19,7 +19,7 @@
   "license": "ISC",
   "repository": "https://github.com/henderea/comment-parser",
   "devDependencies": {
-    "@henderea/static-site-builder": "^1.3.1",
+    "@henderea/static-site-builder": "^1.3.2",
     "concurrently": "^5.1.0",
     "eslint": "^6.8.0",
     "serve": "^11.3.0"
